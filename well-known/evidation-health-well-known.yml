@@ -1,0 +1,78 @@
+generated: '2026-08-01'
+method: searched
+source: live GET probes of /.well-known/* on every Evidation host in apis.yml
+hosts:
+- host: https://evidation.com
+  note: Webflow-hosted marketing site behind Cloudflare; returns a real 404 HTML body
+    for unmatched /.well-known/* paths, so 200s below are genuine documents.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/plain; charset=utf-8
+    file: evidation-health-security.txt
+    spec: RFC 9116
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.us.evidation.com
+  note: Member application backend / app-store deep-link host. It is a single-page-app
+    catch-all — every unmatched path returns HTTP 200 with the same 25,925-byte HTML
+    shell, so 200 responses on this host are NOT evidence of a document. Only the
+    security.txt below returned real content (a 302 to the apex copy).
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    redirects_to: https://evidation.com/.well-known/security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    verified: false
+    reason: SPA catch-all HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    verified: false
+    reason: SPA catch-all HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    verified: false
+    reason: SPA catch-all HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    verified: false
+    reason: SPA catch-all HTML shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    verified: false
+    reason: SPA catch-all HTML shell, not a document — rejected per the A2A probe rule
+  - path: /.well-known/agent.json
+    status: 200
+    verified: false
+    reason: SPA catch-all HTML shell, not a document — rejected per the A2A probe rule
+summary:
+  documents_found: 1
+  security_txt: true
+  openid_configuration: false
+  oauth_authorization_server: false
+  api_catalog: false
+  ai_plugin: false
+  agent_card: false
+x-evidence:
+  fetched: '2026-08-01'
+  hosts_probed:
+  - evidation.com
+  - api.us.evidation.com
+  dns_no_record:
+  - api.evidation.com
+  - docs.evidation.com
+  - developers.evidation.com
+  - trust.evidation.com
+  - security.evidation.com
+  - status.evidation.com

@@ -1,0 +1,63 @@
+# Evidation Health
+
+> Evidation Health is a San Mateo, California digital health company, founded in 2012, that measures health in everyday life and runs permissioned real-world data research at scale. Its consumer app and platform — Achievement — rewards members for connecting wearables, apps and health records, and its enterprise Research & Engagement Platform gives life-sciences, payer, government and non-profit customers eConsent and onboarding, ePRO and survey capture, passive and active device monitoring, program analytics, and participant education.
+
+Evidation combines permissioned data from sources including Apple Health, Fitbit, Garmin, Dexcom and EHR/claims records (via a partnership with 1upHealth's FHIR-based Patient Connect, and with HealthVerity). It has enabled 175+ virtual real-world studies and programs and 70+ peer-reviewed publications, with members across 97% of US zip codes.
+
+**API status: Evidation publishes no public developer program, no API documentation, and no machine-readable API contract (no OpenAPI, AsyncAPI, GraphQL, MCP server or A2A agent card were found on any Evidation host as of 2026-08-01).** Programmatic surfaces are the member application backend (`api.us.evidation.com`, undocumented and authenticated) and enterprise data deliveries arranged per contract. Integration is a commercial conversation, not a self-serve signup.
+
+## Platform
+
+- [Research & Engagement Platform](https://evidation.com/for-customers/our-platform): eConsent and onboarding, multi-modal data collection (ePROs, surveys, connected devices, health records), passive and active monitoring, program analytics, participant education.
+- [Our Solutions](https://evidation.com/for-customers/our-solutions): measure, recruit, engage and activate offerings for life sciences, payers, government and non-profits.
+- [CohortLink](https://evidation.com/cohortlink): ongoing patient engagement across multiple studies per year.
+- [Datasets](https://evidation.com/for-customers/datasets): real-world data assets.
+- [Achievement member experience](https://evidation.com/how-it-works): how individuals connect apps and devices and earn rewards.
+
+## Company
+
+- [Homepage](https://evidation.com/)
+- [About Us](https://evidation.com/about-us)
+- [Why Evidation](https://evidation.com/for-customers/why-evidation)
+- [Research](https://evidation.com/research)
+- [Newsroom](https://evidation.com/newsroom)
+- [Blog](https://evidation.com/blog)
+- [Careers](https://evidation.com/careers)
+- [Contact](https://evidation.com/contact)
+- [GitHub organization](https://github.com/evidation-health) (no public repositories as of 2026-08-01)
+
+## Sign up and support
+
+- [Join research](https://evidation.com/join-research) — member sign up
+- [Member sign in](https://my.evidation.com/)
+- [Help center](https://help.evidation.com/hc/en-us)
+- [Frequently asked questions](https://evidation.com/frequently-asked-questions)
+- [Customer contact](https://evidation.com/for-customers/contact-us)
+
+## Policies
+
+- [Terms](https://evidation.com/terms)
+- [Privacy notice](https://evidation.com/privacy)
+- [Member terms](https://evidation.com/members-terms)
+- [Member privacy](https://evidation.com/members-privacy)
+- [Consumer health data privacy notice](https://evidation.com/consumer-health-data-privacy-notice)
+- [California privacy notice](https://evidation.com/california-privacy-notice)
+- [Do not share or sell](https://evidation.com/do-not-share-or-sell)
+- [Modern slavery statement](https://evidation.com/modern-slavery-statement)
+- [Anti-bribery and corruption policy](https://evidation.com/anti-bribery-and-corruption-policy)
+
+## Security
+
+- [security.txt (RFC 9116)](https://evidation.com/.well-known/security.txt) — vulnerability contact `vuln@evidation.com`; privacy notice also lists `security@evidation.com`.
+
+## API Evangelist artifacts
+
+- well-known/evidation-health-well-known.yml — /.well-known/* discovery index
+- well-known/evidation-health-security.txt — verbatim RFC 9116 security.txt
+- security/evidation-health-domain-security.yml — TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe
+- security/evidation-health-vulnerability-disclosure.yml — disclosure contacts and gaps
+
+---
+generated: 2026-08-01
+method: generated
+source: apis.yml + evidation.com sitemap + repo artifacts (no /llms.txt published — https://evidation.com/llms.txt returns 404)
