@@ -11,6 +11,17 @@ description: Evidation Health is a San Mateo, California digital health company,
   Evidation publishes no public developer program, API documentation, or machine-readable API contract;
   its programmatic surfaces are the member app backend and enterprise data deliveries, neither of which
   is publicly documented.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/61faadbd3ec7085e2c97a896/6238b3daff9fc61e0ccf7e1e_logo-evidation.svg
 url: https://raw.githubusercontent.com/api-evangelist/evidation-health/refs/heads/main/apis.yml
 x-type: company
