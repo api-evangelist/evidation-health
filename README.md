@@ -64,29 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Evidation Health is a San Mateo, California digital health company, founded in 2012, that measures health in everyday life and runs permissioned real-world data research at scale. Its consumer app and platform — Achievement — rewards members for connecting wearables, apps and health records, and its enterprise Research & Engagement Platform gives life-sciences, payer, government and non-profit customers eConsent and onboarding, ePRO and survey capture, passive and active device monitoring, program analytics, and participant education.
+Evidation Health is a San Mateo, California digital health company, founded in 2012, that measures health in everyday life and runs permissioned real-world data research at scale. Its consumer app and platform — Achievement — rewards members for connecting wearables, apps and health records, and its enterprise Research & Engagement Platform gives life-sciences, payer, government and non-profit customers eConsent and onboarding, ePRO and survey capture, passive and active device monitoring, program analytics, and participant education. Evidation combines data from sources including Apple Health, Fitbit, Garmin, Dexcom and EHR/claims records (via a partnership with 1upHealth's FHIR-based Patient Connect, and with HealthVerity), and has enabled 175+ virtual real-world studies and 70+ peer-reviewed publications. Evidation publishes no public developer program, API documentation, or machine-readable API contract; its programmatic surfaces are the member app backend and enterprise data deliveries, neither of which is publicly documented.
 
-Evidation combines permissioned data from sources including Apple Health, Fitbit, Garmin, Dexcom and EHR/claims records (via partnerships with 1upHealth's FHIR-based Patient Connect and with HealthVerity), and has enabled 175+ virtual real-world studies and 70+ peer-reviewed publications.
+**Areas:** Company · Health · Healthcare · Digital Health · Real-World Data · Clinical Research · Wearables · Patient Engagement · Life Sciences · Health Data
 
-## API surface
+## Evidation Health on APIs.io
 
-As of 2026-08-01 Evidation publishes **no public developer program, API documentation, or machine-readable API contract**. Probes of every Evidation host found no OpenAPI/Swagger, no GraphQL, no AsyncAPI, no MCP server and no A2A agent card. `api.us.evidation.com` is the member application backend and app-store deep-link host — a single-page-app catch-all that answers HTTP 200 with the same HTML shell for every path, so it yields no discoverable contract. Integration with Evidation is a commercial arrangement, not a self-serve developer signup.
+Everything profiled for Evidation Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/evidation-health/](https://apis.io/providers/evidation-health/)** — or go straight to one of the APIs or properties below.
 
-## What was found
+### Published properties
 
-- [security.txt](https://evidation.com/.well-known/security.txt) (RFC 9116) — vulnerability contact `vuln@evidation.com`, PGP fingerprint, expires 2027-08-21. The privacy notice also lists `security@evidation.com`.
-- Domain security: TLS 1.3, HSTS (max-age 15552000), DNSSEC enabled, SPF and DMARC with `p=reject`, no CAA record.
-- [GitHub organization](https://github.com/evidation-health) exists with zero public repositories.
-- No status page, no changelog, no SDKs or packages in any public registry, no Postman workspace, no published compliance certifications (SOC 2 / ISO 27001 / HITRUST are not claimed on the public site).
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Links
+#### Security (2)
 
-- Website — https://evidation.com/
-- Platform — https://evidation.com/for-customers/our-platform
-- Blog — https://evidation.com/blog
-- Newsroom — https://evidation.com/newsroom
-- Help center — https://help.evidation.com/hc/en-us
-- Join research — https://evidation.com/join-research
-- Member sign in — https://my.evidation.com/
-- Terms — https://evidation.com/terms
-- Privacy — https://evidation.com/privacy
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Evidation Health Domain Security](https://apis.io/security/evidation-health/evidation-health-domain-security/)
+- [Evidation Health Vulnerability Disclosure](https://apis.io/security/evidation-health/evidation-health-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://evidation.com/)
+- [Sign up](https://evidation.com/join-research)
+- [Support](https://help.evidation.com/hc/en-us)
+- [Blog](https://evidation.com/blog)
+- [Security](https://evidation.com/.well-known/security.txt)
+- [Terms of service](https://evidation.com/terms)
+- [Privacy policy](https://evidation.com/privacy)
+- [GitHub](https://github.com/evidation-health)
+
+## API Evangelist rating
+
+**Kin Score 15.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 34.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/evidation-health/](https://apis.io/providers/evidation-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Evidation Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/evidation-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
